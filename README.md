@@ -27,6 +27,13 @@ Once R is installed (`apt-get install r-base` on any sensible operating system
   > source("setup.R")
 	> source("plotbeebwords.R")
 
+Now additionally
+
+	> source("reduceplot.R")
+
+Which is a real kluge to hardcode zoom - I will make it better I promise, don't
+look at the code.
+
 which will install all libraries and run. You will then be left in an
 interactive environment in which you can poke around with the data structures
 which you can list with `ls()`
