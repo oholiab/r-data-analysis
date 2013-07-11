@@ -25,6 +25,7 @@ Once R is installed (`apt-get install r-base` on any sensible operating system
 ;]) run R and on the interactive prompt:
 
   > source("setup.R")
+
 	> source("plotbeebwords.R")
 
 Now additionally
