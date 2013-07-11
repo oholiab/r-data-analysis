@@ -16,6 +16,7 @@ for (i in 1:length(src)){
 	}
 }
 (test <- Corpus(DataframeSource(DATA, encoding = "ASCII")))
+test <- tm_map(test, removePunctuation)
 dtm <- DocumentTermMatrix(test)
 sv <- svd(dtm)
 U <- sv$u
@@ -27,4 +28,10 @@ rownames(V) = colnames(dtm)
 p = plot(V)
 for(i in 1:nrow(V)){
 	textxy(V[i,1],V[i,2],rownames(V)[i])
+}
+
+labelplot <- function(V){
+	for(i in 1:nrow(V)){
+		textxy(V[i,1],V[i,2],rownames(V)[i])
+	}
 }
